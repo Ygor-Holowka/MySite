@@ -1,11 +1,11 @@
 function showSection(sectionId) {
-    // Esconde todas as seções
+    
     const sections = document.querySelectorAll('.section');
     sections.forEach(section => {
       section.style.display = 'none';
     });
   
-    // Mostra a seção clicada
+    
     const activeSection = document.getElementById(sectionId);
     activeSection.style.display = 'block';
   }
@@ -18,6 +18,4 @@ function showSection(sectionId) {
       details.style.display = "none";
     }
   }
-  
-  // Exibir a seção "Sobre Mim" por padrão ao carregar a página
   
