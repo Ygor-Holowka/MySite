@@ -18,9 +18,3 @@ function showSection(sectionId) {
         details.style.display = "none";
     }
 }
-
-
-
-  
-  // Exibir a seção "Sobre Mim" por padrão ao carregar a página
-  
