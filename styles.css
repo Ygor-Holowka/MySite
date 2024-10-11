@@ -76,21 +76,21 @@ h1 {
 }
 
 .icon {
-  width: 20px;
-  height: 20px;
+  width: 24px; 
+  height: 24px;
   margin-right: 10px;
   vertical-align: middle;
 }
 
 .social-iconx {
-  width: 60px;
-  height: 20px;
+  width: 60px; 
+  height: auto;
   margin: 0 10px;
 }
 
 .social-icon {
-  width: 20px;
-  height: 20px;
+  width: 24px; 
+  height: 24px;
   margin: 0 10px;
 }
 
@@ -183,8 +183,8 @@ footer p {
   }
 
   .icon {
-    width: 16px; 
-    height: 16px;
+    width: 20px; 
+    height: 20px; 
     margin-right: 8px;
   }
 }
