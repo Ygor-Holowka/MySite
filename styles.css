@@ -4,23 +4,31 @@
   box-sizing: border-box;
 }
 
-
 body {
   font-family: 'Arial', sans-serif;
   background: linear-gradient(to right, #3e1e72, #355fa8);
-  
   color: #fff;
   line-height: 1.6;
   padding-top: 40px;
 }
 
+.skills ul {
+  list-style-position: inside; 
+  text-align: center; 
+  padding-left: 0; 
+}
+
+.skills ul li {
+  margin-bottom: 10px; 
+}
 
 .container {
   width: 80%;
+  max-width: 1200px;
   margin: 0 auto;
   text-align: center;
+  padding: 10px;
 }
-
 
 header {
   display: flex;
@@ -35,6 +43,7 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  flex-wrap: wrap;
 }
 
 .left-side {
@@ -55,7 +64,6 @@ header {
   margin-left: 20px;
 }
 
-
 h1 {
   font-size: 36px;
   margin-bottom: 10px;
@@ -67,25 +75,21 @@ h1 {
   margin-bottom: 10px;
 }
 
-.contact {
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-
-.social-links {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.social-icon {
+.icon {
   width: 20px;
   height: 20px;
-  margin: 0 10px;
+  margin-right: 10px;
+  vertical-align: middle;
 }
 
 .social-iconx {
   width: 60px;
+  height: 20px;
+  margin: 0 10px;
+}
+
+.social-icon {
+  width: 20px;
   height: 20px;
   margin: 0 10px;
 }
@@ -95,11 +99,6 @@ a {
   text-decoration: none;
 }
 
-ul {
-  line-height: 2.2;
-}
-
-
 nav {
   text-align: center;
   margin-top: 30px;
@@ -108,9 +107,9 @@ nav {
 .nav-buttons {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 10px;
 }
-
 
 .nav-btn {
   padding: 10px 20px;
@@ -124,42 +123,20 @@ nav {
   transition: opacity 0.3s;
 }
 
-
-.nav-btn:focus,
-.nav-btn:active {
-  opacity: 0.7;
-}
-
-
-@media screen and (max-width: 600px) {
-  .nav-btn {
-    width: auto;
-    padding: 8px 13px;
-    font-size: 11px;
-    margin: 1px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .container {
-    width: 100%; 
-    padding: 0 10px; 
-  }
-}
-
 .nav-btn:hover {
   opacity: 0.7;
 }
 
-
 .section {
-  display: 'sobre';
   padding: 40px 0;
   background-color: #007BFF;
   margin-bottom: 30px;
   border-radius: 8px;
 }
 
+.job-details {
+  display: none; 
+}
 
 button {
   background-color: #007BFF;
@@ -174,19 +151,8 @@ button:hover {
   opacity: 0.7;
 }
 
-
-.job-details {
-  display: none;
-  margin-top: 10px;
-  background-color: #8b96f7;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-
 footer {
   background: linear-gradient(to right, #3e1e72, #355fa8);
-  /* Gradiente azul e roxo */
   color: #fff;
   text-align: center;
   padding: 20px 0;
@@ -194,4 +160,74 @@ footer {
 
 footer p {
   font-size: 14px;
+}
+
+/* Responsividade */
+
+.contact-text {
+  display: inline;
+}
+
+.contact-icons {
+  display: none;
+}
+
+
+@media (max-width: 768px) {
+  .contact-text {
+    display: none;
+  }
+
+  .contact-icons {
+    display: inline;
+  }
+
+  .icon {
+    width: 16px; 
+    height: 16px;
+    margin-right: 8px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .right-side img.photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .contact {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-btn {
+    width: 100%;
+    margin: 10px 0;
+  }
 }
