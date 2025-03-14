@@ -10,11 +10,15 @@ function showSection(sectionId) {
     activeSection.style.display = 'block';
   }
   
-  function toggleDetails(id) {
-    var details = document.getElementById(id);
-    if (details.style.display === "none") {
-        details.style.display = "block";
+  function toggleDetails(jobId) {
+    var jobDetails = document.getElementById(jobId);
+    var button = jobDetails.previousElementSibling;
+
+    if (jobDetails.style.display === "none" || jobDetails.style.display === "") {
+        jobDetails.style.display = "block";
+        button.textContent = "Ver menos"; 
     } else {
-        details.style.display = "none";
+        jobDetails.style.display = "none";
+        button.textContent = "Ver mais";
     }
 }
